@@ -1,0 +1,91 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[british]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[hidelinks]{hyperref}
+\usepackage{indentfirst}
+\usepackage{listings}
+\usepackage{minted}
+\setminted{
+  breaklines=true,
+  breakanywhere=true,
+  autogobble=true,
+  fontsize=\small
+}
+\usepackage[most]{tcolorbox}
+\usepackage{enumitem}
+\setlist{  
+  listparindent=\parindent,
+  parsep=0pt,
+}
+\usepackage{csquotes}
+\usepackage[style=authoryear-ibid,backend=biber,giveninits=true,date=long]{biblatex}
+\addbibresource{bibliography.bib}
+
+\DeclareFieldFormat{url}{Available at\addcolon\space\url{#1}}
+\DeclareFieldFormat{urldate}{\mkbibparens{Accessed\addcolon\space#1}}
+\DeclareDelimFormat{nameyeardelim}{\addcomma\space}
+
+\setlist[itemize]{before=\setlength{\parindent}{1em}}
+\definecolor{lightgreen}{rgb}{0.56, 0.93, 0.56}
+\definecolor{moonstoneblue}{rgb}{0.45, 0.66, 0.76}
+
+\author{Charlie Kingsland (101065453)}
+\title{CS2800 Coursework 2}
+\linespread{1.0}
+
+\begin{document}
+
+\begin{titlepage}
+   \begin{center}
+       \vspace*{1cm}
+
+       \textbf{Coursework <>}
+
+       \vspace{0.5cm}
+        MODULE CODE
+            
+       \vspace{1.5cm}
+
+       \textbf{Charlie Kingsland (ZNAC411 / 101065453)}
+       \hyperlink{mailto:Charlie.Kingsland.2024@live.rhul.ac.uk}{Charlie.Kingsland.2024@live.rhul.ac.uk}
+
+       \vfill
+            
+       extra info -
+       \url{https://google.com/}
+            
+       \vspace{0.8cm}
+            
+       Royal Holloway, University of London\\
+       DATE
+            
+   \end{center}
+\end{titlepage}
+
+\section{Placeholder}\label{placeholder}
+This is just a placeholder with \mintinline{python}{inline code} and a reference to \parencite{placeholder}
+
+\begin{tcolorbox}[
+    enhanced,
+    attach boxed title to top left={xshift=6mm,yshift=-3mm},
+    colback=moonstoneblue!20,
+    colframe=moonstoneblue,
+    colbacktitle=moonstoneblue,
+    title=Code snippet,
+    fonttitle=\bfseries\color{black},
+    boxed title style={size=small,colframe=moonstoneblue,sharp corners},
+    sharp corners,
+]
+\begin{minted}[linenos]{python}
+# Print "Hello, World!" to the console
+print("Hello, World!")
+\end{minted}
+\end{tcolorbox}
+
+
+\printbibliography
+
+\end{document}
